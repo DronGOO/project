@@ -1,0 +1,57 @@
+{% extends 'kved/base.html' %}
+
+{% block title %}Kved.com.ua - Каталог видов деятельности, Квед-2010{% endblock title %}
+
+{% block content %}
+
+{% for item in categories %}
+    <article class="list-item home-page">
+    <a class="item-link" href="{% url 'news_by_category' item.slug %}">       
+        <div class="item-content">
+            <div class="td">
+                <div class="item-date ">{{item.slug}}</div>        
+               
+            </div>
+            <div class="td">
+                <h2>{{item.title}}</h2>
+            </div>
+        </div>
+    </a>
+    <footer class="article-footer clearfix">
+        <div class="left"><strong>Кведы с {{item.news_set.first.digit}}  по  {{item.news_set.last.digit}}</strong></div>       
+        <div class="right"></div>         
+    </footer> 
+</article>
+{% if forloop.counter == 4 or forloop.last or forloop.counter == 8 or forloop.counter == 12 or forloop.counter == 16 %}{% include 'kved/ads.html' %}{% endif %}
+{% endfor %}
+
+{% endblock content %}
+
+
+
+
+{% block search %}
+<div class="col-md-4">
+                    
+
+    
+    <div class="box box-search">
+
+    <form id="cse-search-box" method='GET' action='/search' class="search">
+    <input type='text' name='q'  placeholder='Поиск' value='{{ request.GET.q }}' required oninvalid="this.setCustomValidity('Введите запрос не менее 3 символов');" pattern=".{3,}" oninput="setCustomValidity('')"/>
+    <button ><i class="fa fa-search"></i></button>
+    </form>
+
+    </div>
+
+
+                            
+
+
+
+
+
+</div>
+{% include 'kved/social.html'  %}
+{% include 'kved/side.html' %}
+{% endblock search %}

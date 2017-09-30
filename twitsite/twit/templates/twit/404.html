@@ -1,0 +1,14 @@
+{% extends "kved/base.html" %}
+
+
+{% block title %}Страница не найдена{% endblock title %}
+<meta name="robots" content="noindex, nofollow">
+{% block content %}
+    <footer class="main-foot">
+		<div class="container-fluid">
+            <h2>Запрашиваемая страница не найдена</h2>
+    		<p>Возможно, неправильно указан путь в адресной строке или страница была удалена.</p>
+    		<h3>Перейти на <a href="{% url 'category_list' %}">Главную страницу</a></h3>
+        </div>				
+	</footer>
+{% endblock content %}

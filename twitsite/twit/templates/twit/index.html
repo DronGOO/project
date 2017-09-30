@@ -1,0 +1,34 @@
+{% load staticfiles %}
+{% load twitter_tags %}
+    <html>
+        <head>
+            <title>TweeToday</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="{% static 'css/twit.css' %}">
+        </head>
+        <body>
+            <div class="page-header">
+                <h1><a href="/">TweeToday</a></h1>
+            </div>
+             {% for tweet in tweets|dictsortreversed:"favorite_count" %}
+            <div class="infinite-container">                
+                <div class="infinite-item">
+                   
+                    <li>
+                        <a href="https://www.twitter.com/{{ tweet.user.screen_name }}/status/{{ tweet.id }}" target="_blank">
+                        <img src="{{ tweet.user.profile_image_url }}" width="32" height="32" />
+                        <h2>{{ tweet.user.name }}<br /><span>@{{ tweet.user.screen_name }} &middot;</a>{{ tweet.text }} <p>{{ tweet.media }}</p><p>{{ tweet.created_at }}</p><p>like: {{ tweet.favorite_count }} Retweet: {{ tweet.retweet_count }}</p>                            
+                    </li>
+                </div>      
+            </div>            
+            {% endfor %}
+
+
+
+        </body>
+
+
+    </html>
+
+

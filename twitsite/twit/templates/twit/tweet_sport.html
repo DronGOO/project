@@ -1,0 +1,38 @@
+{% extends 'twit/base.html' %}
+{% load twitter_tags %}
+{% block title %}Lantuh.com - События спорта{% endblock title %}
+
+{% block content %}
+
+{% for tweet in tweets|dictsortreversed:"favorite_count" %}
+    <article class="list-item home-page">
+    <a class="item-link" href="https://www.twitter.com/{{ tweet.user.screen_name }}/status/{{ tweet.id }}" target="_blank">  
+        <div class="item-content">
+            <div class="td">
+                <div class="item-date "><img src="{{ tweet.user.profile_image_url }}" width="64" height="64" /></div>        
+               
+            </div>
+            <div class="td">
+                <h2>
+                    <span class="title-cat"><i <img src="{{ tweet.user.profile_image_url }}" width="64" height="64" /></i> {{ tweet.user.name }} @{{ tweet.user.screen_name }}</span>
+                    <span class="pos-title">{{ tweet.text }}</span>
+                </h2>
+
+                
+                <h3>{{ tweet.media }}</h3>
+            </div>
+        </div>
+    </a>
+    <footer class="article-footer clearfix">
+        <div class="left"><strong>Like: {{ tweet.favorite_count }}  Retweet: {{ tweet.retweet_count }}</strong></div>       
+        <div class="right"></div>         
+    </footer> 
+</article>
+{% if forloop.counter == 4 or forloop.last or forloop.counter == 8 or forloop.counter == 12 or forloop.counter == 16 %}{% include 'twit/ads.html' %}{% endif %}
+{% endfor %}
+
+{% endblock content %}
+
+
+
+

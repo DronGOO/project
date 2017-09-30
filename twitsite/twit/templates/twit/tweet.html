@@ -1,0 +1,46 @@
+{% extends 'twit/base.html' %}
+{% load twitter_tags %}
+{% block title %}Lantuh.com - Популярные твиты, События{% endblock title %}
+
+{% block content %}
+
+{% for tweet in tweets|dictsortreversed:"favorite_count" %}
+    <article class="list-item home-page">
+    <footer class="article-footer clearfix">
+        <div class="left"><img src="{{ tweet.user.profile_image_url }}" width="64" height="64" />  | <strong>{{ tweet.user.name }}</strong> @{{ tweet.user.screen_name }}</div>       
+        <div class="right"></div>         
+    </footer>    
+     
+        <div class="item-content">
+            <div class="td">                        
+                <h2>
+                    <span class="pos-title">{{ tweet.text }}</span>
+                </h2>
+            </div>
+            <div class="td">
+                
+
+                
+                
+            </div>
+            <div class="item-img-wrap">
+            <a href="https://www.twitter.com/{{ tweet.user.screen_name }}/status/{{ tweet.id }}" target="_blank">
+                <img class="responsive-img load" data-original="{{ tweet.media }}" src="{{ tweet.media }}" >
+                <noscript><img class="responsive-img" src="{{ tweet.media }}" ></noscript>
+            </a>
+        </div>
+        </div>
+    </a>
+    <footer class="article-footer clearfix">
+        <div class="left"><strong><img src="../static/img/like.svg"> {{ tweet.favorite_count }}  <img src="../static/img/retweet.svg"> {{ tweet.retweet_count }}</strong></div>       
+        <div class="right">{{ tweet.created_at}} </div>         
+    </footer> 
+</article>
+{% if forloop.counter == 4 or forloop.last or forloop.counter == 8 or forloop.counter == 12 or forloop.counter == 16 %}{% include 'twit/ads.html' %}{% endif %}
+{% endfor %}
+
+{% endblock content %}
+
+
+
+

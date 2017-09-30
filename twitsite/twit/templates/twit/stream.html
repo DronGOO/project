@@ -1,0 +1,41 @@
+
+<div class="col-md-4">
+                    
+
+    
+    <div class="box box-search">
+	{% for tweet in tweets %}
+    <article class="list-item home-page">
+    <a class="item-link" href="https://www.twitter.com/{{ tweet.user.screen_name }}/status/{{ tweet.id }}" target="_blank">  
+        <div class="item-content">
+            <div class="td">
+                <div class="item-date "><img src="{{ tweet.user.profile_image_url }}" width="64" height="64" /></div>        
+               
+            </div>
+            <div class="td">
+                <h4>
+                    <span class="title-cat"><i <img src="{{ tweet.user.profile_image_url }}" width="64" height="64" /></i> {{ tweet.user.name }} @{{ tweet.user.screen_name }}</span>
+                    <span class="pos-title">{{ tweet.text }}</span>
+                </h4>
+
+                
+                <h4>{{ tweet.media }}</h4>
+            </div>
+        </div>
+    </a>
+     
+</article>
+{% if forloop.counter == 4 or forloop.last or forloop.counter == 8 or forloop.counter == 12 or forloop.counter == 16 %}{% include 'twit/ads.html' %}{% endif %}
+{% endfor %}
+
+
+    </div>
+
+
+                            
+
+
+
+
+
+</div>
