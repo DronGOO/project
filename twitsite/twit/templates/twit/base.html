@@ -12,65 +12,67 @@
 	<meta name="description" content="" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="{% static 'img/favicon.png' %}" />	
+	<link rel="shortcut icon" href="{% static 'img/favicon.png' %}" />
 	<link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap-grid-3.3.1.min.css' %}" />
-	<link rel="stylesheet" href="{% static 'fonts/font-awesome-4.6.3/css/font-awesome.min.css' %}" />	
+	<link rel="stylesheet" href="{% static 'fonts/font-awesome-4.6.3/css/font-awesome.min.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/main.css' %}" />
 	<link rel="stylesheet" href="{% static 'css/media.css' %}" />
 
 </head>
 <body>
-	
+
 
 	<!-- Header Start -->
 	<header class="main-head">
-		
+
 		<div class="container-fluid">
-			
+
 			<div class="row">
 				<div class="col-md-12">
 
-					
-					
+
+
 					<a class="logo" href="/">
-						<img alt="kved.com.ua" src="{% static 'img/lantuh_logo.png' %}">
-						
+						<img alt="lantuh.com" src="{% static 'img/lantuh_logo.png' %}">
+
 					</a>
-					<div class="soc_buttons">					
+					<div class="soc_buttons">
 					<strong>Поделиться :</strong>
 
-		
+
 
 				    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-599dae8704497af1"></script>
-				    <div class="addthis_inline_share_toolbox"></div>		
+				    <div class="addthis_inline_share_toolbox"></div>
 					</div>
-						
+
 				</div>
-				
+
 			</div>
 
 			<nav class="nav scroll bg-grey">
 				<span class="nav-item">
-		      <a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}" >#Основное</a>
-		      <a  href="#" >#Политика</a>
-		      <a  href="#" >#Шоу-бизнес</a>
-		      <a  class="{% if request.path == '/sport' %}active{% endif %}" href="{% url 'sport' %}" >#Спорт</a>
-		      <a  class="{% if request.path == '/it' %}active{% endif %}" href="{% url 'it' %}" >#ИТ</a>
+		      <a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}" >#основное</a>
+		      <a  class="{% if request.path == '/social' %}active{% endif %}" href="{% url 'social' %}" >#мнения(возможно18+)</a>
+		      <a  class="{% if request.path == '/showbiz' %}active{% endif %}" href="{% url 'showbiz' %}" >#шоу-бизнес</a>
+		      <a  class="{% if request.path == '/sport' %}active{% endif %}" href="{% url 'sport' %}" >#спорт</a>
+		      <a  class="{% if request.path == '/it' %}active{% endif %}" href="{% url 'it' %}" >#технологии</a>
+		      <a  class="{% if request.path == '/game' %}active{% endif %}" href="{% url 'game' %}" >#игры</a>
+		      <a  class="{% if request.path == '/auto' %}active{% endif %}" href="{% url 'auto' %}" >#авто</a>
 	      		</span>
 	    	</nav>
 
 		</div>
-		
+
 	</header>
 		<nav class="nav scroll bg-grey">
 			<span class="nav-item">
-	      
+
       		</span>
     	</nav>
 	<!-- Header End -->
 	<nav class="nav scroll bg-grey">
-		
+
 	</nav>
 	<div class="preloader"></div>
 	<div id="adbd"></div>
@@ -80,14 +82,14 @@
 		<div class="container-fluid">
 
 			<div class="row">
-				
+
 				<div class="col-md-8">
 
-					
+
 
 					<div class="pjax-container">
-						
-						
+
+
 				{% block content %}
                 {% endblock %}
 
@@ -96,21 +98,21 @@
 
 				{% block pagination_cat %}
                 {% endblock %}
-		
-					
+
+
 					</div>
 
 				</div>
-				
+
 					<aside class="site-aside">
 
 				{% block search %}
-				{% include 'twit/side.html'  %}
-				{% include 'twit/stream.html' %}
+				{#{% include 'twit/side.html'  %}#}
+				{#{% include 'twit/stream.html' %}#}
 				{% endblock search %}
-				
+
 					</aside>
-				
+
 
 
 
@@ -123,15 +125,26 @@
 
 	<!-- Footer Start -->
 	<footer class="main-foot">
+	        <nav class="nav scroll bg-grey">
+				<span class="nav-item">
+		      <a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}" >#основное</a>
+		      <a  class="{% if request.path == '/social' %}active{% endif %}" href="{% url 'social' %}" >#мнения(возможно18+)</a>
+		      <a  class="{% if request.path == '/showbiz' %}active{% endif %}" href="{% url 'showbiz' %}" >#шоу-бизнес</a>
+		      <a  class="{% if request.path == '/sport' %}active{% endif %}" href="{% url 'sport' %}" >#спорт</a>
+		      <a  class="{% if request.path == '/it' %}active{% endif %}" href="{% url 'it' %}" >#технологии</a>
+		      <a  class="{% if request.path == '/game' %}active{% endif %}" href="{% url 'game' %}" >#игры</a>
+		      <a  class="{% if request.path == '/auto' %}active{% endif %}" href="{% url 'auto' %}" >#авто</a>
+	      		</span>
+	    	</nav>
 		<div class="container-fluid">
-			<p>Каталог актуальных видов деятельности</p>
-			2011-2017 &copy; kved.com.ua 
-			
-						
-						
-			
+			<p>Лантух - Последние новости и события в мире</p>
+			2017 &copy; lahtuh.com
+
+
+
+
 			<!-- Stats -->
-			
+
 			<!-- Google Analytics counter --><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -142,27 +155,27 @@
   ga('send', 'pageview');
 
 </script><!-- /Google Analytics counter -->
-			
+
 			<!-- Stats End -->
 
-		</div>			
-						
-					
+		</div>
 
-				
+
+
+
 	</footer>
 	<!-- Footer End -->
 
-	
-
-	
-	
 
 
 
-	
-	
-	
+
+
+
+
+
+
+
 	<script src="{% static 'libs/jquery/jquery-1.11.1.min.js' %}"></script>
 	<script src="{% static 'js/common.js' %}"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
@@ -170,5 +183,6 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow88.js"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </html>

@@ -25,7 +25,8 @@ SECRET_KEY = 'r9j_!$4$1gs-*e3+eir6hx^m4l4p3g1v!&=69!70+fv(i)w11o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -101,5 +102,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/home/DronGOO/project/twitsite/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

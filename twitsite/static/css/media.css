@@ -1,0 +1,199 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.soc_buttons {
+		float: center;
+	}
+	.soc_buttons > a {
+		color: #727fa5;
+		font-size: 36px;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	.content {
+    margin-bottom: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 100px;
+	}
+	.item-content .td h2{
+    vertical-align: middle;
+    padding-right: 15px;
+    margin-left: 30px;
+    margin-right: 20px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+
+	.maian_mnu a {
+	color: #fff;
+	font-size: 14px;
+	padding:  0 ;
+	display: block;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+	}
+	.maian_mnu a:hover {
+		text-decoration-color: -moz-use-text-color;
+	    text-decoration-line: underline;
+	    text-decoration-style: solid;
+	}
+	.logo img {		
+	    height: 40px;
+	    margin-right: 10px;	    
+	    width: auto;
+	}
+	.soc_buttons {
+		float: right;
+	}
+	.soc_buttons > a {
+		color: #727fa5;
+		font-size: 36px;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	.content {
+    margin-bottom: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 100px;
+	}
+	.item-content .td h2{
+    vertical-align: middle;
+    padding-right: 15px;
+    margin-left: 30px;
+    margin-right: 20px;
+	}
+	
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	.maian_mnu a {
+	color: #fff;
+	font-size: 14px;
+	padding:  0 ;
+	display: block;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+	}
+	.maian_mnu a:hover {
+		text-decoration-color: -moz-use-text-color;
+	    text-decoration-line: underline;
+	    text-decoration-style: solid;
+	}
+	.soc_buttons {
+		float: right;
+	}
+	.soc_buttons > a {
+		color: #727fa5;
+		font-size: 36px;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	.content {
+    margin-bottom: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 100px;
+	}
+	.item-content .td h2{
+    vertical-align: middle;
+    padding-right: 15px;
+    margin-left: 30px;
+    margin-right: 20px;
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	.maian_mnu a {
+	color: #fff;
+	font-size: 14px;
+	padding:  0 ;
+	display: block;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+	}
+	.maian_mnu a:hover {
+		text-decoration-color: -moz-use-text-color;
+	    text-decoration-line: underline;
+	    text-decoration-style: solid;
+	}
+	.soc_buttons {
+		float: right;
+	}
+	.soc_buttons > a {
+		color: #727fa5;
+		font-size: 36px;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	.maian_mnu a {
+	color: #fff;
+	font-size: 16px;
+	padding:  0 ;
+	display: block;
+	-webkit-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+	}
+	.maian_mnu a:hover {
+		text-decoration-color: -moz-use-text-color;
+	    text-decoration-line: underline;
+	    text-decoration-style: solid;
+	}
+	.soc_buttons {
+		float: right;
+	}
+	.soc_buttons > a {
+		color: #727fa5;
+		font-size: 36px;
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.top_links {
+		display: inline-block !important;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.maian_mnu ul {
+		display: block !important;
+	}
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

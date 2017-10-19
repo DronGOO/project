@@ -1,0 +1,35 @@
+{% extends 'twit/base.html' %}
+{% load twitter_tags %}
+{% block title %}lantuh.com - События в мире авто{% endblock title %}
+
+{% block content %}
+
+{% for tweet in tweets %}
+
+    <article class="list-item home-page">
+
+        <div class="item-content">
+            <div class="td">
+
+
+            </div>
+            <div class="td">
+                <h2>
+
+                    <span class="pos-title">{{ tweet.text|urlizetrunc:15 }}</span>
+                </h2>
+
+
+                <blockquote class="twitter-tweet" align="center" data-lang="ru"><p lang="und" dir="ltr"><br> <a href="https://twitter.com/{{ tweet.user.screen_name }}/status/{{ tweet.id }}"></a></p></blockquote>
+
+
+
+            </div>
+        </div>
+    </a>
+
+</article>
+{# {% if forloop.counter == 4 or forloop.last or forloop.counter == 8 or forloop.counter == 12 or forloop.counter == 16 %}{% include 'twit/ads.html' %}{% endif %} #}
+{% endfor %}
+
+{% endblock content %}

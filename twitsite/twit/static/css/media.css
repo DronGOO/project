@@ -54,9 +54,9 @@
 	    text-decoration-line: underline;
 	    text-decoration-style: solid;
 	}
-	.logo img {		
+	.logo img {
 	    height: 40px;
-	    margin-right: 10px;	    
+	    margin-right: 10px;
 	    width: auto;
 	}
 	.soc_buttons {
@@ -80,7 +80,7 @@
     margin-left: 30px;
     margin-right: 20px;
 	}
-	
+
 }
 
 /* Custom, iPhone Retina */
